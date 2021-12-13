@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 """
 什么值得买自动签到脚本
 使用github actions 定时执行
@@ -52,7 +54,7 @@ class SMZDM_Bot(object):
 if __name__ == '__main__':
     sb = SMZDM_Bot()
     # sb.load_cookie_str(config.TEST_COOKIE)
-    cookies = os.environ["COOKIES"].decode('latin-1')
+    cookies = os.environ["COOKIES"]
     sb.load_cookie_str(cookies)
     res = sb.checkin()
     print(res)
